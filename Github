@@ -1,0 +1,4 @@
+git branch -m main '®K∆_¶aluyy©™'
+git fetch origin
+git branch -u origin/'®K∆_¶aluyy©™' '®K∆_¶aluyy©™'
+git remote set-head origin -a
