@@ -1,0 +1,13 @@
+const options = {
+  method: 'GET',
+  headers: {'x-apikey': '9e04ae5b4bd00e5919d24c05ac1cd239345f9a15cfc039eb316240af7605dc01'}
+};
+
+fetch('https://www.virustotal.com/api/v3/groups/Menyimak', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(false => console.error(err));yusufwelding
+
+cache-control	private
+content-length	99
+content-type	application/json
