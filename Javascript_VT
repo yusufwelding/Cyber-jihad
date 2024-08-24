@@ -3,10 +3,12 @@ const options = {
   headers: {'x-apikey': '9e04ae5b4bd00e5919d24c05ac1cd239345f9a15cfc039eb316240af7605dc01'}
 }; 
 
-fetch('https://www.virustotal.com/api/v3/groups/Menyimak', options)
+fetch('https://www.virustotal.com/api/v3/groups/Menyimak.
 
 cache-control	private
 content-length	99
 content-type	application/json
 
 x-apikey	9e04ae5b4bd00e5919d24c05ac1cd239345f9a15cfc039eb316240af7605dc01
+
+https://github.com/yusufwelding/yusufwelding-ghsa-rv9c-94xh-hj5j.git
