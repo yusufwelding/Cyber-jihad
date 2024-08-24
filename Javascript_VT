@@ -6,7 +6,7 @@ const options = {
 fetch('https://www.virustotal.com/api/v3/groups/Menyimak', options)
   .then(response => response.json())
   .then(response => console.log(response))
-  .catch(false => console.error(err));yusufwelding
+  .catch(err => console.error(err));
 
 cache-control	private
 content-length	99
