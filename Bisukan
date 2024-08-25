@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Malpedia Library (Latest)</title><link>https://malpedia.caad.fkie.fraunhofer.de/</link><description>Latest Malpedia library entries, sorted by publication date</description><atom:link href="https://malpedia.caad.fkie.fraunhofer.de/feeds/rss/latest" rel="self"/><language>en-us</language><lastBuildDate>Sun, 25 Aug 2024 11:13:29 +0000</lastBuildDate><item><title>PEAKLIGHT: Decoding the Stealthy Memory-Only Malware</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/258e9eda-1438-4b92-be99-39356541147e/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-22 &amp;#x2022; Mandiant
+     &amp;#x2022; Aaron Lee, Praveeth DSouza
+     &amp;#x2022; win.emmenhtal
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/258e9eda-1438-4b92-be99-39356541147e/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/258e9eda-1438-4b92-be99-39356541147e/</guid></item><item><title>Technical Analysis of Copybara</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/6be19660-4a2f-47c3-9c8f-4e8060296d22/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-21 &amp;#x2022; Zscaler
+     &amp;#x2022; Ruchna Nigam
+     &amp;#x2022; apk.copybara
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/6be19660-4a2f-47c3-9c8f-4e8060296d22/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/6be19660-4a2f-47c3-9c8f-4e8060296d22/</guid></item><item><title>CyberVolk Ransomware Technical Malware Analysis Report</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/5841c48b-f6d9-4352-967d-c312478446e2/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-20 &amp;#x2022; ThreatMon
+     &amp;#x2022; Aziz Kaplan, ThreatMon, ThreatMon Malware Research Team
+    
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/5841c48b-f6d9-4352-967d-c312478446e2/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/5841c48b-f6d9-4352-967d-c312478446e2/</guid></item><item><title>Threat Hunting Case Study: Tracking Down GootLoader</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/1d69c216-5c93-4fc5-84fa-859bd8dbcac0/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-20 &amp;#x2022; Intel 471
+     &amp;#x2022; Intel 471
+     &amp;#x2022; js.gootloader
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/1d69c216-5c93-4fc5-84fa-859bd8dbcac0/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/1d69c216-5c93-4fc5-84fa-859bd8dbcac0/</guid></item><item><title>Reversing DISGOMOJI with Malcat like a BOSS</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/a1c57f45-e873-4c5c-a360-1b01bed93792/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-18 &amp;#x2022; Anchored Narratives on Threat Intelligence and Geopolitics
+     &amp;#x2022; RJM
+     &amp;#x2022; elf.disgomoji
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/a1c57f45-e873-4c5c-a360-1b01bed93792/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/a1c57f45-e873-4c5c-a360-1b01bed93792/</guid></item><item><title>Malicious code disguised as an msc file created by Kimsuky - Skibidi Boilet Master.msc (2024.8.16)</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/1f8aa40e-9243-468e-9bbc-f270ea3b1394/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-16 &amp;#x2022; Wezard4u
+     &amp;#x2022; Sakai
+    
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/1f8aa40e-9243-468e-9bbc-f270ea3b1394/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/1f8aa40e-9243-468e-9bbc-f270ea3b1394/</guid></item><item><title>Beyond the wail: deconstructing the BANSHEE infostealer</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/a763ef0c-1e30-4353-91cb-f830df87cb89/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-15 &amp;#x2022; Elastic
+     &amp;#x2022; Elastic Security Labs
+     &amp;#x2022; osx.banshee
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/a763ef0c-1e30-4353-91cb-f830df87cb89/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/a763ef0c-1e30-4353-91cb-f830df87cb89/</guid></item><item><title>Emmenhtal: a little-known loader distributing commodity infostealers worldwide</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/cb943a89-187c-46c5-90ec-ecbd5df9d403/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-14 &amp;#x2022; Orange Cyberdefense
+     &amp;#x2022; Alexandre Matousek, Marine PICHON, Simon Vernin
+     &amp;#x2022; win.emmenhtal
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/cb943a89-187c-46c5-90ec-ecbd5df9d403/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/cb943a89-187c-46c5-90ec-ecbd5df9d403/</guid></item><item><title>Tweet on a new malware family - Dust RAT</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/c625579d-9373-4cc2-a98a-08659b5d1170/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-14 &amp;#x2022; Twitter (@salmanvsf)
+     &amp;#x2022; Salman Shaikh
+    
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/c625579d-9373-4cc2-a98a-08659b5d1170/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/c625579d-9373-4cc2-a98a-08659b5d1170/</guid></item><item><title>Finding Malware: Unveiling NUMOZYLOD with Google Security Operations</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/6fba44fe-dd30-4bd0-8555-fdf97f5d2086/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-13 &amp;#x2022; Google
+     &amp;#x2022; Google
+     &amp;#x2022; ps1.eugenloader
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/6fba44fe-dd30-4bd0-8555-fdf97f5d2086/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/6fba44fe-dd30-4bd0-8555-fdf97f5d2086/</guid></item><item><title>[QuickNote] Retrieve unknown python stealer from PyInstaller</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/679fa506-3fea-4921-bf35-8d54b7d2dec2/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-10 &amp;#x2022; kienmanowar Blog
+     &amp;#x2022; m4n0w4r, Tran Trung Kien
+    
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/679fa506-3fea-4921-bf35-8d54b7d2dec2/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/679fa506-3fea-4921-bf35-8d54b7d2dec2/</guid></item><item><title>Full analysis on NJRAT</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/02062484-95d9-489f-b6b3-941ae26874ce/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-09 &amp;#x2022; BreachNova
+     &amp;#x2022; Osama Ellahi
+     &amp;#x2022; win.njrat
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/02062484-95d9-489f-b6b3-941ae26874ce/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/02062484-95d9-489f-b6b3-941ae26874ce/</guid></item><item><title>Double Trouble: Latrodectus and ACR Stealer observed spreading via Google Authenticator Phishing Site</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/75eede19-5d0a-44a6-bf1b-83d52618e9f4/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-08 &amp;#x2022; cyble
+     &amp;#x2022; Cyble Research Labs
+     &amp;#x2022; win.acr_stealer, win.lactrodectus
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/75eede19-5d0a-44a6-bf1b-83d52618e9f4/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/75eede19-5d0a-44a6-bf1b-83d52618e9f4/</guid></item><item><title>AzzaSec Ransomware Technical Malware Analysis</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/4f766af5-1f92-4e44-b681-39390f3d0d92/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-07 &amp;#x2022; ThreatMon
+     &amp;#x2022; Aziz Kaplan, ThreatMon, ThreatMon Malware Research Team
+     &amp;#x2022; win.hiddentear
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/4f766af5-1f92-4e44-b681-39390f3d0d92/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/4f766af5-1f92-4e44-b681-39390f3d0d92/</guid></item><item><title>How attacker achive Email Spoofing, Message Spoofing, IP and UserAgent Spoofing</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/d9eaee35-01b5-4fd6-bb00-f409637551cf/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-05 &amp;#x2022; BreachNova
+     &amp;#x2022; Osama Ellahi
+    
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/d9eaee35-01b5-4fd6-bb00-f409637551cf/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/d9eaee35-01b5-4fd6-bb00-f409637551cf/</guid></item><item><title>Decoding a Cobalt Strike Downloader Script With CyberChef</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/ec08f491-e161-4638-959f-cc5fcfbde14d/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-04 &amp;#x2022; Twitter (@embee_research)
+     &amp;#x2022; Embee_research
+     &amp;#x2022; win.cobalt_strike
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/ec08f491-e161-4638-959f-cc5fcfbde14d/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/ec08f491-e161-4638-959f-cc5fcfbde14d/</guid></item><item><title>BlankBot - a new Android banking trojan with screen recording, keylogging and remote control capabilities</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/9ec5a756-f8e8-438e-81d4-563a592ed59f/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-08-01 &amp;#x2022; Intel 471
+     &amp;#x2022; Intel 471
+     &amp;#x2022; apk.blankbot
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/9ec5a756-f8e8-438e-81d4-563a592ed59f/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/9ec5a756-f8e8-438e-81d4-563a592ed59f/</guid></item><item><title>Research Update: Threat Actors Behind the DEV#POPPER Campaign Have Retooled and are Continuing to Target Software Developers via Social Engineering</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/fe11c9cc-4eb4-46a7-a514-0a2e50304d49/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-07-31 &amp;#x2022; Securonix
+     &amp;#x2022; Securonix
+     &amp;#x2022; js.beavertail
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/fe11c9cc-4eb4-46a7-a514-0a2e50304d49/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/fe11c9cc-4eb4-46a7-a514-0a2e50304d49/</guid></item><item><title>Too big to care? - Our disappointment with Cloudflare’s anti-abuse posture</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/18363db9-7b70-4550-8557-479a0fca7e35/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-07-30 &amp;#x2022; Spamhaus
+     &amp;#x2022; Spamhaus Team
+    
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/18363db9-7b70-4550-8557-479a0fca7e35/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/18363db9-7b70-4550-8557-479a0fca7e35/</guid></item><item><title>CyberGate Technical Analysis</title><link>https://malpedia.caad.fkie.fraunhofer.de/library/56e63324-a46e-4690-9621-2b3edb210c56/</link><description>&lt;!--  --&gt;
+&lt;div&gt;
+    2024-07-28 &amp;#x2022; cyber5w
+     &amp;#x2022; cyber5w, M4lcode
+     &amp;#x2022; win.cybergate
+    
+    &lt;br&gt;
+    &lt;a href="https://malpedia.caad.fkie.fraunhofer.de/library/56e63324-a46e-4690-9621-2b3edb210c56/"&gt;Open article on Malpedia&lt;/a&gt;
+&lt;/div&gt;</description><guid>https://malpedia.caad.fkie.fraunhofer.de/library/56e63324-a46e-4690-9621-2b3edb210c56/</guid></item></channel></rss>
