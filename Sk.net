@@ -1,0 +1,186 @@
+– IMPORTANT:
+– YOU MUST REPLACE  `PROJECT.DATASET.TABLE` -- BILLING_BQ_EXPORT_TABLE_NAME
+– WITH THE BILLING BigQuery TABLE NAME IN THE QUERIES BELOW.
+DECLARE LOOK_BACK_WINDOW INT64 DEFAULT 30;
+
+-- Hourly data for the window.
+WITH
+ base AS (
+ SELECT
+   *,
+ IF
+   (total_cost >= credits_from_existing_cuds,
+     (total_cost - credits_from_existing_cuds),
+     0) AS cost_eligible_for_additional_flex_cuds_considering_cud_credits,
+ IF
+   (total_cost >= (credits_from_existing_cuds + credits_from_existing_suds),
+     (total_cost - (credits_from_existing_cuds + credits_from_existing_suds)),
+     0) AS cost_eligible_for_additional_flex_cuds_considering_cud_and_sud_credits
+ FROM (
+   SELECT
+     usage_start_time,
+     SUM(cost) AS total_cost,
+     (SUM((
+         SELECT
+           SUM(c.amount)
+         FROM
+           UNNEST(credits) AS c
+         WHERE
+           c.type IN ( "COMMITTED_USAGE_DISCOUNT",
+             "COMMITTED_USAGE_DISCOUNT_DOLLAR_BASE" ))) * -1) AS credits_from_existing_cuds,
+     (SUM((
+         SELECT
+           SUM(c.amount)
+         FROM
+           UNNEST(credits) AS c
+         WHERE
+           c.type IN ( "SUSTAINED_USAGE_DISCOUNT" ))) * -1) AS credits_from_existing_suds,
+   FROM
+     `PROJECT.DATASET.TABLE` -- BILLING_BQ_EXPORT_TABLE_NAME
+   WHERE
+     1 = 1
+     AND DATE(_PARTITIONTIME) >= DATE_ADD(CURRENT_DATE(), INTERVAL -LOOK_BACK_WINDOW DAY)
+     AND usage_start_time >= TIMESTAMP(DATE_ADD(CURRENT_DATE(), INTERVAL -LOOK_BACK_WINDOW DAY))
+     AND usage_start_time < TIMESTAMP(CURRENT_DATE())
+     AND service.description = "Compute Engine"
+     AND ( 1 = 0
+       OR sku.description LIKE 'C2D AMD Instance Core running in%'
+       OR sku.description LIKE 'C2D AMD Instance Ram running in%'
+       OR sku.description LIKE 'C2D AMD Sole Tenancy Instance Core running in%'
+       OR sku.description LIKE 'C2D AMD Sole Tenancy Instance RAM running in%'
+       OR sku.description LIKE 'C2D AMD Sole Tenancy Instance Ram running in%'
+       OR sku.description LIKE 'Compute optimized Core running in%'
+       OR sku.description LIKE 'Compute optimized Instance Core running in%'
+       OR sku.description LIKE 'Compute optimized Instance Ram running in%'
+       OR sku.description LIKE 'Compute optimized Ram running in%'
+       OR sku.description LIKE 'Compute-optimized Sole Tenancy Instance Core running in%'
+       OR sku.description LIKE 'Compute-optimized Sole Tenancy Instance RAM running in%'
+       OR sku.description LIKE 'Compute-optimized Sole Tenancy Instance Ram running in%'
+       OR sku.description LIKE 'Custom E2 Instance Core running in%'
+       OR sku.description LIKE 'Custom E2 Instance Ram running in%'
+       OR sku.description LIKE 'Custom Extended Instance Ram running in%'
+       OR sku.description LIKE 'Custom Instance Core running in%'
+       OR sku.description LIKE 'Custom Instance Ram running in%'
+       OR sku.description LIKE 'E2 Instance Core running in%'
+       OR sku.description LIKE 'E2 Instance Ram running in%'
+       OR sku.description LIKE 'N1 Predefined Instance Core running in%'
+       OR sku.description LIKE 'N1 Predefined Instance Ram running in%'
+       OR sku.description LIKE 'N2 Custom Extended Instance Ram running in%'
+       OR sku.description LIKE 'N2 Custom Instance Core running in%'
+       OR sku.description LIKE 'N2 Custom Instance Ram running in%'
+       OR sku.description LIKE 'N2 Instance Core running in%'
+       OR sku.description LIKE 'N2 Instance Ram running in%'
+       OR sku.description LIKE 'N2 Sole Tenancy Instance Core running in%'
+       OR sku.description LIKE 'N2 Sole Tenancy Instance RAM running in%'
+       OR sku.description LIKE 'N2 Sole Tenancy Instance Ram running in%'
+       OR sku.description LIKE 'N2D AMD Custom Extended Instance Ram running in%'
+       OR sku.description LIKE 'N2D AMD Custom Extended Ram running in%'
+       OR sku.description LIKE 'N2D AMD Custom Instance Core running in%'
+       OR sku.description LIKE 'N2D AMD Custom Instance Ram running in%'
+       OR sku.description LIKE 'N2D AMD Instance Core running in%'
+       OR sku.description LIKE 'N2D AMD Instance Ram running in%'
+       OR sku.description LIKE 'N2D AMD Sole Tenancy Instance Core running in%'
+       OR sku.description LIKE 'N2D AMD Sole Tenancy Instance RAM running in%'
+       OR sku.description LIKE 'N2D AMD Sole Tenancy Instance Ram running in%'
+       OR sku.description LIKE 'Sole Tenancy Instance Core running in%'
+       OR sku.description LIKE 'Sole Tenancy Instance RAM running in%'
+       OR sku.description LIKE 'Sole Tenancy Instance Ram running in%' )
+   GROUP BY
+     usage_start_time ))
+SELECT
+ *
+FROM
+ base
+ORDER BY
+ usage_start_time DESC;
+
+ -- Minimum flex eligible on demand spend in the window.
+WITH
+ base AS (
+ SELECT
+   *,
+ IF
+   (total_cost >= credits_from_existing_cuds,
+     (total_cost - credits_from_existing_cuds),
+     0) AS cost_eligible_for_additional_flex_cuds_considering_cud_credits,
+ IF
+   (total_cost >= (credits_from_existing_cuds + credits_from_existing_suds),
+     (total_cost - (credits_from_existing_cuds + credits_from_existing_suds)),
+     0) AS cost_eligible_for_additional_flex_cuds_considering_cud_and_sud_credits
+ FROM (
+   SELECT
+     usage_start_time,
+     SUM(cost) AS total_cost,
+     (SUM((
+         SELECT
+           SUM(c.amount)
+         FROM
+           UNNEST(credits) AS c
+         WHERE
+           c.type IN ( "COMMITTED_USAGE_DISCOUNT",
+             "COMMITTED_USAGE_DISCOUNT_DOLLAR_BASE" ))) * -1) AS credits_from_existing_cuds,
+     (SUM((
+         SELECT
+           SUM(c.amount)
+         FROM
+           UNNEST(credits) AS c
+         WHERE
+           c.type IN ( "SUSTAINED_USAGE_DISCOUNT" ))) * -1) AS credits_from_existing_suds,
+   FROM
+     `PROJECT.DATASET.TABLE` -- BILLING_BQ_EXPORT_TABLE_NAME
+   WHERE
+     1 = 1
+     AND DATE(_PARTITIONTIME) >= DATE_ADD(CURRENT_DATE(), INTERVAL -LOOK_BACK_WINDOW DAY)
+     AND usage_start_time >= TIMESTAMP(DATE_ADD(CURRENT_DATE(), INTERVAL -LOOK_BACK_WINDOW DAY))
+     AND usage_start_time < TIMESTAMP(CURRENT_DATE())
+     AND service.description = "Compute Engine"
+     AND ( 1 = 0
+       OR sku.description LIKE 'C2D AMD Instance Core running in%'
+       OR sku.description LIKE 'C2D AMD Instance Ram running in%'
+       OR sku.description LIKE 'C2D AMD Sole Tenancy Instance Core running in%'
+       OR sku.description LIKE 'C2D AMD Sole Tenancy Instance RAM running in%'
+       OR sku.description LIKE 'C2D AMD Sole Tenancy Instance Ram running in%'
+       OR sku.description LIKE 'Compute optimized Core running in%'
+       OR sku.description LIKE 'Compute optimized Instance Core running in%'
+       OR sku.description LIKE 'Compute optimized Instance Ram running in%'
+       OR sku.description LIKE 'Compute optimized Ram running in%'
+       OR sku.description LIKE 'Compute-optimized Sole Tenancy Instance Core running in%'
+       OR sku.description LIKE 'Compute-optimized Sole Tenancy Instance RAM running in%'
+       OR sku.description LIKE 'Compute-optimized Sole Tenancy Instance Ram running in%'
+       OR sku.description LIKE 'Custom E2 Instance Core running in%'
+       OR sku.description LIKE 'Custom E2 Instance Ram running in%'
+       OR sku.description LIKE 'Custom Extended Instance Ram running in%'
+       OR sku.description LIKE 'Custom Instance Core running in%'
+       OR sku.description LIKE 'Custom Instance Ram running in%'
+       OR sku.description LIKE 'E2 Instance Core running in%'
+       OR sku.description LIKE 'E2 Instance Ram running in%'
+       OR sku.description LIKE 'N1 Predefined Instance Core running in%'
+       OR sku.description LIKE 'N1 Predefined Instance Ram running in%'
+       OR sku.description LIKE 'N2 Custom Extended Instance Ram running in%'
+       OR sku.description LIKE 'N2 Custom Instance Core running in%'
+       OR sku.description LIKE 'N2 Custom Instance Ram running in%'
+       OR sku.description LIKE 'N2 Instance Core running in%'
+       OR sku.description LIKE 'N2 Instance Ram running in%'
+       OR sku.description LIKE 'N2 Sole Tenancy Instance Core running in%'
+       OR sku.description LIKE 'N2 Sole Tenancy Instance RAM running in%'
+       OR sku.description LIKE 'N2 Sole Tenancy Instance Ram running in%'
+       OR sku.description LIKE 'N2D AMD Custom Extended Instance Ram running in%'
+       OR sku.description LIKE 'N2D AMD Custom Extended Ram running in%'
+       OR sku.description LIKE 'N2D AMD Custom Instance Core running in%'
+       OR sku.description LIKE 'N2D AMD Custom Instance Ram running in%'
+       OR sku.description LIKE 'N2D AMD Instance Core running in%'
+       OR sku.description LIKE 'N2D AMD Instance Ram running in%'
+       OR sku.description LIKE 'N2D AMD Sole Tenancy Instance Core running in%'
+       OR sku.description LIKE 'N2D AMD Sole Tenancy Instance RAM running in%'
+       OR sku.description LIKE 'N2D AMD Sole Tenancy Instance Ram running in%'
+       OR sku.description LIKE 'Sole Tenancy Instance Core running in%'
+       OR sku.description LIKE 'Sole Tenancy Instance RAM running in%'
+       OR sku.description LIKE 'Sole Tenancy Instance Ram running in%' )
+   GROUP BY
+     usage_start_time ))
+ SELECT
+   MIN (cost_eligible_for_additional_flex_cuds_considering_cud_credits) AS
+   min_cost_eligible_for_additional_flex_cuds_considering_cud_credits,
+    MIN (cost_eligible_for_additional_flex_cuds_considering_cud_and_sud_credits) AS
+    min_cost_eligible_for_additional_flex_cuds_considering_cud_and_sud_credits FROM
+   base;
